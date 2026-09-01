@@ -26,79 +26,9 @@
         font-size: large;
         margin: 0;
       }
-      .description {
-        margin-bottom: 15px;
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .btn-dark,
       .btn-outline-dark {
         margin-top: 5%;
         font-size: 1.25em;
-      }
-      .icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 0.25em;
-        vertical-align: text-bottom;
-      }
-      /* pipeline teaser */
-      .pipe-step {
-        border: 1px solid #ced4da;
-        border-radius: 6px;
-        padding: 12px 10px;
-        height: 100%;
-        background-color: #fff;
-      }
-      .pipe-step .step-num {
-        display: inline-block;
-        font-size: 0.75em;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        color: #6c757d;
-        text-transform: uppercase;
-      }
-      .pipe-step h5 {
-        font-size: 1em;
-        margin: 4px 0 6px 0;
-      }
-      .pipe-step p {
-        font-size: 0.85em;
-        color: #495057;
-      }
-      .pipe-arrow {
-        text-align: center;
-        color: #6c757d;
-        font-size: 1.5em;
-        line-height: 1;
-        margin: 4px 0;
-      }
-      /* headline numbers */
-      .stat {
-        text-align: center;
-        padding: 10px;
-      }
-      .stat .stat-num {
-        font-size: 2.4em;
-        font-weight: 700;
-        line-height: 1.1;
-      }
-      .stat .stat-label {
-        font-size: 0.9em;
-        color: #495057;
-      }
-      table.paper-table {
-        font-size: 0.9em;
-      }
-      table.paper-table td,
-      table.paper-table th {
-        padding: 0.35rem 0.5rem;
-      }
-      .table-note {
-        font-size: 0.85em;
-        color: #6c757d;
-        margin-top: 8px;
       }
       pre.code {
         background-color: #f5f5f5;
@@ -107,9 +37,6 @@
         padding: 14px 16px;
         font-size: 0.85em;
         overflow-x: auto;
-      }
-      pre.code .cmt {
-        color: #197b30;
       }
       figcaption.figure-caption {
         font-size: 0.9em;
@@ -142,27 +69,10 @@
           </h4>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md">
-          <p class="text-center" style="font-size: 1em; color: #6c757d">
-            International Journal of Secondary Computing and
-            Applications Research (IJSCAR), Vol. 1, Issue 1
-          </p>
-        </div>
-      </div>
       <div
         class="row justify-content-md-center text-center"
         style="margin-top: 20px; margin-bottom: 30px"
       >
-        <div class="col-auto lg-2">
-          <a
-            href="https://doi.org/10.5281/zenodo.14279494"
-            class="badge badge-pill badge-dark"
-            style="padding: 0.75em 1.5em; font-size: 0.85em"
-          >
-            Publication
-          </a>
-        </div>
         <div class="col-auto lg-2">
           <a
             href="https://github.com/Tshin120/AOE2_Scenario_Generator"
@@ -170,6 +80,15 @@
             style="padding: 0.75em 1.5em; font-size: 0.85em"
           >
             Github
+          </a>
+        </div>
+        <div class="col-auto lg-2">
+          <a
+            href="https://github.com/Tshin120/AOE2_Scenario_Generator/tree/main/code"
+            class="badge badge-pill badge-dark"
+            style="padding: 0.75em 1.5em; font-size: 0.85em"
+          >
+            Generator Code
           </a>
         </div>
         <div class="col-auto lg-2">
@@ -184,438 +103,7 @@
       </div>
       <hr />
 
-      <h3 class="text-center" style="margin-bottom: 30px">
-        Can a one-line description of a historical event become a
-        scenario you can play?
-      </h3>
-      <p class="text-justify description" style="margin-bottom: 30px">
-        Authoring a campaign-quality <em>Age of Empires II</em>
-        scenario takes hours of work in an idiosyncratic editor and
-        fluency in the history it depicts, so most historical events
-        are simply absent from the game. We turn scenario authoring
-        into code generation against a game-modding API: an episode
-        specification goes in, and a <code>.aoe2scenario</code> file a
-        player can load in the shipped game comes out.
-      </p>
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="pipe-step">
-            <span class="step-num">Input</span>
-            <h5>Episode specification</h5>
-            <p>
-              A title, a two-to-three sentence description, a scenario
-              type drawn from six categories (battle, escort, defense,
-              conquest, diplomacy, story), and optional region and
-              civilization hints. Those six fields are the entire
-              input.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="pipe-step">
-            <span class="step-num">Generator</span>
-            <h5>LLM writes Python</h5>
-            <p>
-              A compositional system prompt is assembled from the
-              scenario type's template and optional conditioning
-              blocks, and the model emits Python against the
-              open-source <code>AoE2ScenarioParser</code> API — units,
-              terrain, players, and triggers as Python objects.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="pipe-step">
-            <span class="step-num">Output</span>
-            <h5>A playable scenario file</h5>
-            <p>
-              Validated against structural preconditions, executed in
-              an isolated subprocess, and repaired on failure — up to
-              three times — before the resulting file is confirmed to
-              load back through the parser.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="pipe-arrow" style="margin-top: 20px">&#8595;</div>
-
-      <div class="row justify-content-md-center">
-        <div class="col-md-10">
-          <div class="pipe-step">
-            <span class="step-num">The key mechanism</span>
-            <h5>Introspection-guided self-repair</h5>
-            <p>
-              <code>AoE2ScenarioParser</code> is thinly represented in
-              model training data, so the dominant failure class is
-              API misuse: importing an enum member that does not
-              exist, calling a real method with the wrong signature,
-              naming a module that was never there. For
-              <code>ImportError</code>, <code>AttributeError</code>,
-              <code>TypeError</code>, <code>NameError</code> and
-              <code>ModuleNotFoundError</code>, the generator does not
-              merely relay the error message. It introspects the
-              <em>installed</em> library at repair time and injects
-              ground truth into the repair prompt: the module's real
-              exports, the closest matches to the name the model
-              invented, or the true signature of the method it
-              miscalled. Repair therefore corrects against the API
-              surface that will actually execute the code.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-
-      <h3 class="text-center" style="margin-top: 20px">
-        Explore the release
-      </h3>
-      <p class="text-center description">
-        We release the generator, the prompts, the rubric, and the
-        evaluation harness, along with the generated scenarios
-        themselves.
-      </p>
-      <div class="row justify-content-md-center text-center">
-        <div class="col-auto lg-4">
-          <a
-            href="https://github.com/Tshin120/AOE2_Scenario_Generator/tree/main/code"
-            class="btn btn-dark"
-            >Go to Generator Code</a
-          >
-        </div>
-        <div class="col-auto lg-4" style="margin-bottom: 10px">
-          <a
-            href="https://github.com/Tshin120/AOE2_Scenario_Generator/tree/main/scenarios"
-            class="btn btn-dark"
-            >Go to Scenarios</a
-          >
-        </div>
-      </div>
-
-      <hr />
-
-      <div
-        class="row justify-content-md-center"
-        style="
-          background-color: rgb(245, 245, 245);
-          padding: 10px;
-          margin-top: 20px;
-        "
-      >
-        <div class="col-lg-9">
-          <h4 class="text-center" style="margin-top: 20px">Abstract</h4>
-          <p class="text-justify" style="margin-bottom: 30px">
-            Historical strategy games are one of the most widely used
-            informal channels through which people encounter the past,
-            and research in the learning sciences suggests that
-            playing them can produce durable historical understanding.
-            The history a player can actually inhabit, however, is
-            limited to the scenarios someone has built: authoring a
-            single campaign-quality scenario for a game like
-            <em>Age of Empires II</em> demands hours of work and
-            simultaneous fluency in the history and in an idiosyncratic
-            editor, so most historical events are simply absent. We
-            address this authorship bottleneck, generating complete
-            playable scenarios from a short natural-language
-            description of a historical event, so that an educator can
-            produce a scenario for exactly the episode a lesson needs.
-            Our pipeline prompts a large language model to write Python
-            against an open-source scenario-file API and executes the
-            result, backed by an introspection-guided self-repair loop
-            that grounds error correction in the installed library's
-            real API surface, and a fully automated evaluation in which
-            build success and playability are machine-checked and
-            historical fidelity is scored against a rubric by an LLM
-            judge validated with a mismatch control. Over eight
-            historical episodes, 31 of 32 runs produced a scenario that
-            loads in the shipped game and a static audit found none
-            unwinnable. Our main result separates two kinds of
-            knowledge that a single quality score conflates. Stating
-            the fidelity criteria in the generator's own prompt moves
-            the dimensions where content is a choice, but the weakest
-            dimension in the study &mdash; the setting a scenario
-            depicts &mdash; proved bounded by API knowledge instead:
-            two thirds of its gain arrived with three lines of
-            extracted API fact rather than with any instruction about
-            history, and those same lines took first-attempt builds
-            from zero of eight to eight of eight. The effect replicates
-            on eight held-out episodes. We release the generator,
-            prompts, rubric, and evaluation harness.
-          </p>
-        </div>
-      </div>
-
-      <hr />
-
-      <h3 class="text-center" style="margin-top: 20px">Results</h3>
-      <div class="row justify-content-md-center">
-        <div class="col-md-3 stat">
-          <div class="stat-num">31/32</div>
-          <div class="stat-label">
-            baseline runs produced a scenario that loads in the shipped
-            game
-          </div>
-        </div>
-        <div class="col-md-3 stat">
-          <div class="stat-num">0</div>
-          <div class="stat-label">
-            of 31 built scenarios were unwinnable under a static
-            reachability audit
-          </div>
-        </div>
-        <div class="col-md-3 stat">
-          <div class="stat-num">0 &rarr; 8</div>
-          <div class="stat-label">
-            of 8 first-attempt builds, after adding three lines of
-            extracted API fact
-          </div>
-        </div>
-        <div class="col-md-3 stat">
-          <div class="stat-num">2.97 &rarr; 4.10</div>
-          <div class="stat-label">
-            mean historical fidelity (1&ndash;5), baseline to rubric +
-            API facts
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style="margin-top: 30px">
-        <div class="col-lg-6">
-          <h5 style="margin-bottom: 15px">
-            Build outcomes by prompt condition
-          </h5>
-          <table class="table table-sm paper-table">
-            <thead>
-              <tr>
-                <th>Reach</th>
-                <th>Style</th>
-                <th><em>n</em></th>
-                <th>Built</th>
-                <th>1st try</th>
-                <th>Att.</th>
-                <th>Trig.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>on</td>
-                <td>templated</td>
-                <td>8</td>
-                <td>100%</td>
-                <td>50%</td>
-                <td>1.50</td>
-                <td>37</td>
-              </tr>
-              <tr>
-                <td>off</td>
-                <td>templated</td>
-                <td>8</td>
-                <td>88%</td>
-                <td>88%</td>
-                <td>1.00</td>
-                <td>34</td>
-              </tr>
-              <tr>
-                <td>on</td>
-                <td>freeform</td>
-                <td>8</td>
-                <td>100%</td>
-                <td>88%</td>
-                <td>1.12</td>
-                <td>13</td>
-              </tr>
-              <tr>
-                <td>off</td>
-                <td>freeform</td>
-                <td>8</td>
-                <td>100%</td>
-                <td>75%</td>
-                <td>1.25</td>
-                <td>14</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="table-note">
-            <em>n</em> is episodes per cell; <em>Built</em> and
-            <em>1st try</em> are percentages of <em>n</em>,
-            <em>Att.</em> the mean generation calls per episode, and
-            <em>Trig.</em> the mean trigger count of the scenarios that
-            built. The single miss was not a modelling failure: one run
-            terminated on an API error before any code was produced.
-            Every run that received a complete generation attempt
-            eventually built.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <h5 style="margin-bottom: 15px">
-            Historical fidelity, scored 1&ndash;5 by an LLM judge
-          </h5>
-          <table class="table table-sm paper-table">
-            <thead>
-              <tr>
-                <th>Condition</th>
-                <th><em>n</em></th>
-                <th>Comb.</th>
-                <th>Set.</th>
-                <th>Even.</th>
-                <th>Obj.</th>
-                <th>Ped.</th>
-                <th>Mean</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="8">
-                  <em>Baseline: no rubric in the generator prompt</em>
-                </td>
-              </tr>
-              <tr>
-                <td>templated, reach on</td>
-                <td>8</td>
-                <td>2.25</td>
-                <td>1.96</td>
-                <td>2.96</td>
-                <td>4.04</td>
-                <td>3.21</td>
-                <td>2.80</td>
-              </tr>
-              <tr>
-                <td>templated, reach off</td>
-                <td>7</td>
-                <td>2.14</td>
-                <td>1.95</td>
-                <td>2.95</td>
-                <td>4.00</td>
-                <td>3.10</td>
-                <td>2.76</td>
-              </tr>
-              <tr>
-                <td>freeform, reach on</td>
-                <td>8</td>
-                <td>2.42</td>
-                <td>2.00</td>
-                <td>3.88</td>
-                <td>3.96</td>
-                <td>3.83</td>
-                <td>3.06</td>
-              </tr>
-              <tr>
-                <td>freeform, reach off</td>
-                <td>8</td>
-                <td>2.75</td>
-                <td>2.00</td>
-                <td>3.92</td>
-                <td>4.21</td>
-                <td>3.92</td>
-                <td>3.22</td>
-              </tr>
-              <tr>
-                <td style="padding-left: 1.5rem">all baseline</td>
-                <td>31</td>
-                <td>2.40</td>
-                <td>1.98</td>
-                <td>3.44</td>
-                <td>4.05</td>
-                <td>3.53</td>
-                <td>2.97</td>
-              </tr>
-              <tr>
-                <td colspan="8">
-                  <em>Rubric in the generator prompt</em>
-                </td>
-              </tr>
-              <tr>
-                <td>+ rubric</td>
-                <td>7</td>
-                <td>3.71</td>
-                <td>2.62</td>
-                <td>3.95</td>
-                <td>4.33</td>
-                <td>4.19</td>
-                <td>3.65</td>
-              </tr>
-              <tr>
-                <td>+ rubric + API facts</td>
-                <td>8</td>
-                <td><strong>3.83</strong></td>
-                <td><strong>3.83</strong></td>
-                <td>4.04</td>
-                <td>4.71</td>
-                <td>4.12</td>
-                <td><strong>4.10</strong></td>
-              </tr>
-              <tr>
-                <td colspan="8">
-                  <em
-                    >Held-out episodes, never seen when the API facts
-                    were written</em
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>baseline</td>
-                <td>8</td>
-                <td>2.17</td>
-                <td>1.83</td>
-                <td>3.75</td>
-                <td>4.25</td>
-                <td>3.71</td>
-                <td>3.00</td>
-              </tr>
-              <tr>
-                <td>+ rubric + API facts</td>
-                <td>8</td>
-                <td><strong>3.96</strong></td>
-                <td><strong>3.92</strong></td>
-                <td>4.17</td>
-                <td>4.67</td>
-                <td>4.21</td>
-                <td><strong>4.18</strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="table-note">
-            Dimensions are <em>combatants</em>, <em>setting</em>,
-            <em>events</em>, <em>objective</em> and
-            <em>pedagogy</em>; <em>Mean</em> averages the four scored
-            dimensions and excludes pedagogy. Each scenario was scored
-            three times independently. The judge is Opus 5, a different
-            model from the generator, and sees only a content digest of
-            the built scenario &mdash; never the code, the model, or
-            the prompt condition. Scored against a
-            <em>different</em> episode's historical brief, the judge
-            averages 1.03 of 5.
-          </p>
-        </div>
-      </div>
-
-      <hr />
-
-      <h3 class="text-center" style="margin-top: 20px">
-        The dissociation: capability, not instruction
-      </h3>
-      <p class="text-justify description" style="margin-bottom: 25px">
-        A generative system pointed at a niche API is solving two
-        problems that look like one from the outside: knowing
-        <em>what</em> the artifact should contain, and knowing how to
-        make the library produce it. Restricting to the seven episodes
-        that carry all three arms, the two dimensions come apart.
-        <strong>Combatants</strong> &mdash; naming the right commander
-        &mdash; moves +1.00 on the rubric alone and a further +0.24 on
-        the API facts: stating the criterion is 81% of the fix.
-        <strong>Setting</strong> moves +0.62 on the rubric and a
-        further +1.19 on the API facts: two thirds of the gain arrives
-        with the facts, not the instruction. All 31 baseline scenarios
-        leave every player at <code>RANDOM</code>, so architecture,
-        player names, and civilization bonuses are drawn by the game at
-        load time rather than by the generator. The model did not know
-        the API well enough to set one field, and no amount of
-        instruction about material culture addressed it.
-      </p>
-
-      <div class="row">
+      <div class="row" style="margin-top: 20px">
         <div class="col-md-6">
           <figure class="figure">
             <img
@@ -623,13 +111,8 @@
               class="figure-img img-fluid"
               alt="Generated Battle of Tours scenario running in Age of Empires II"
             />
-            <figcaption class="figure-caption text-justify">
-              <strong><em>The Battle of Tours</em></strong> (732,
-              reachability off, freeform). The dialogue is accurate to
-              the battle, but the hero the player commands is William
-              the Conqueror, and the Frankish camp renders in Turkish
-              architecture against an opponent the game has named for
-              an Aztec ruler.
+            <figcaption class="figure-caption text-center">
+              <strong><em>The Battle of Tours</em></strong> (732)
             </figcaption>
           </figure>
         </div>
@@ -640,59 +123,10 @@
               class="figure-img img-fluid"
               alt="Generated Battle of Hastings scenario running in Age of Empires II"
             />
-            <figcaption class="figure-caption text-justify">
-              <strong><em>The Battle of Hastings</em></strong> (1066,
-              same condition). The same hero unit is now the correct
-              commander, and the dialogue states the feigned retreat
-              that decided the battle &mdash; yet the Norman line
-              advances past tiered Asian temples. Three lines of API
-              fact eliminate the defect entirely.
+            <figcaption class="figure-caption text-center">
+              <strong><em>The Battle of Hastings</em></strong> (1066)
             </figcaption>
           </figure>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="row" style="margin-top: 20px">
-        <div class="col-lg-6">
-          <h4>Playability is machine-checked</h4>
-          <p class="text-justify" style="margin-bottom: 15px">
-            Code that runs is not the same as a scenario that can be
-            won. A victory condition keyed to "zero enemy units remain
-            in this area" becomes permanently unreachable the moment
-            one enemy unit garrisons a building or flees the region,
-            stranding the player in a scenario that cannot be completed
-            &mdash; a failure no syntax check or successful build will
-            ever surface. A deterministic static analysis reads each
-            built scenario back through the parser and checks for a
-            missing victory or defeat path, a <em>fragile</em> victory,
-            a <em>degenerate</em> victory, and orphan triggers that
-            ship disabled. No scenario in any condition was unwinnable.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <pre class="code"><span class="cmt"># Fragile: unwinnable if one enemy
-# garrisons, converts, or flees.</span>
-vc.new_condition.objects_in_area(
-    quantity=0, ...)
-
-<span class="cmt"># Deterministic: fires when that
-# object dies.</span>
-leader = unit_manager.add_unit(
-    PlayerId.TWO,
-    unit_const=HeroInfo.GENGHIS_KHAN.ID, ...)
-vc = trigger_manager.add_trigger("VC")
-vc.new_condition.destroy_object(
-    unit_object=leader.reference_id)
-vc.new_effect.declare_victory(
-    source_player=PlayerId.ONE, enabled=1)</pre>
-          <p class="table-note">
-            The victory-condition idiom taught by the reachability
-            block: prefer <code>destroy_object</code> on a stored unit
-            reference over
-            <code>objects_in_area(quantity=0)</code>.
-          </p>
         </div>
       </div>
 
@@ -701,17 +135,12 @@ vc.new_effect.declare_victory(
       <div class="row" style="margin-top: 20px; margin-bottom: 20px">
         <div class="col-lg-8">
           <h3 class="title" style="margin-bottom: 20px">Citation</h3>
-          <pre class="code">@article{shin2026playable,
-  title   = {Playable History on Demand:
-             LLM-Generated Age of Empires II Scenarios},
-  author  = {Shin, Thomas and Santolucito, Mark},
-  journal = {International Journal of Secondary Computing
-             and Applications Research},
-  volume  = {1},
-  number  = {1},
-  pages   = {1--10},
-  year    = {2026},
-  doi     = {10.5281/zenodo.14279494}
+          <pre class="code">@unpublished{shin2026playable,
+  title  = {Playable History on Demand:
+            LLM-Generated Age of Empires II Scenarios},
+  author = {Shin, Thomas and Santolucito, Mark},
+  year   = {2026},
+  note   = {Working draft}
 }</pre>
         </div>
         <div class="col-lg-4">
