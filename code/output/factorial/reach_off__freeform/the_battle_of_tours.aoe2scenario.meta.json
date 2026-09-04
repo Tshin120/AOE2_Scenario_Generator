@@ -1,0 +1,137 @@
+{
+  "title": "The Battle of Tours",
+  "description": "October 732. Charles Martel's Frankish infantry must hold the wooded high ground between Tours and Poitiers against the Umayyad cavalry of Abd al-Rahman. A third force of Aquitanian allies under Duke Odo can be rallied to strike the enemy camp. Victory requires repelling the cavalry charges and forcing the invaders' withdrawal.",
+  "scenario_type": "battle",
+  "map_size": 120,
+  "players": 3,
+  "difficulty": "hard",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+  "reachability_prompting": false,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_64f155f605a2",
+  "candidate": 1,
+  "attempts": 2,
+  "trigger_count": 14,
+  "output_path": "output/factorial\\reach_off__freeform\\the_battle_of_tours.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:53:42Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.667,
+    "material": 3.0,
+    "events": 4.333,
+    "anachronism": 2.0,
+    "pedagogy": 3.0,
+    "mean": 3.0,
+    "anachronisms_found": [
+      "Player One's leader is WILLIAM_THE_CONQUEROR, a mounted Norman hero of 1066, standing in for Charles Martel — and mounted, which contradicts the scenario's own 'shield wall' of dismounted Frankish infantry",
+      "Player Two's leader is SALADIN (d. 1193, Ayyubid Egypt/Syria) representing the Umayyad emir Abd al-Rahman al-Ghafiqi of 732 — over four centuries and a different dynasty removed",
+      "Player Three's leader is EL_CID (Castilian, d. 1099) representing Duke Odo of Aquitaine — wrong century and wrong polity, and an odd choice given El Cid fought Muslim and Christian rulers in Iberia, not Umayyad invaders in Gaul",
+      "KNIGHT units in the Umayyad roster: heavy Western-style lancers for an Arab-Berber raiding army; the engine offers Camel Rider, Light Cavalry and Cavalry Archer, which are used elsewhere in the roster, so the Knights were avoidable",
+      "PIKEMAN (a 14th-century weapon system) among the Frankish line where SPEARMAN/MILITIA/MAN_AT_ARMS would have sufficed",
+      "A full economic/military base for the Franks (TOWN_CENTER, BLACKSMITH, MONASTERY, ARCHERY_RANGE, two GUARD_TOWERS) on what the text describes as an improvised wooded ridge position — the Franks fought from a field formation, not a fortified settlement"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.333,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.333,
+    "issues_found": [
+      "Charles Martel is represented by the WILLIAM_THE_CONQUEROR hero — a Norman duke of 1066, three centuries later and a different polity; a renamed generic Frankish champion/paladin would have been the correct substitution.",
+      "Abd al-Rahman al-Ghafiqi is represented by SALADIN, a 12th-century Kurdish Ayyubid sultan — wrong dynasty, wrong culture, wrong century by over 450 years, and the victory trigger is literally keyed on DESTROY_OBJECT of SALADIN.",
+      "Duke Odo of Aquitaine is represented by EL_CID, an 11th-century Castilian — wrong realm and era; a renamed generic knight would have been better.",
+      "Both active players are set to civilization RANDOM, so architecture and unit bonuses are unassigned; Franks (and a Saracen/Berber-flavoured civ for the Umayyads) were available and would have fixed the building set.",
+      "Player 3 (Odo) is given SCOUT_CAVALRY and KNIGHT with no infantry at all; the Aquitanian contingent that raided the camp was a mixed force, and the tiny 20-unit armies understate a battle of tens of thousands even allowing for scale abstraction.",
+      "Umayyad roster leans on CAMEL_RIDER x7; the Andalusian host at Tours was overwhelmingly horse, and the engine's light/heavy cavalry would have been closer."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.667,
+    "objective": 5.0,
+    "pedagogy": 4.667,
+    "mean": 3.417,
+    "issues_found": [
+      "Charles Martel is represented by the WILLIAM_THE_CONQUEROR hero — a Norman duke of 1066, over three centuries after Tours; a renamed generic Frankish champion/paladin was available and would have been correct.",
+      "Abd al-Rahman al-Ghafiqi is represented by SALADIN, a 12th-century Ayyubid sultan of an entirely different dynasty and era; again avoidable via a renamed Saracen cavalry unit.",
+      "Duke Odo of Aquitaine is represented by EL_CID, an 11th-century Castilian — wrong culture, wrong polity, wrong century.",
+      "Both active players are set to civilization RANDOM, so architecture, unit skins and bonuses are undefined; Franks vs Saracens were obvious and available assignments.",
+      "Player 2's Umayyad force includes 6 KNIGHTS (Frankish/European heavy cavalry look) alongside camels and cavalry archers, blurring the visual distinction between the two armies — Saracen mamluks/light cavalry would have read better.",
+      "Frankish force is tiny (20 infantry) against a similarly tiny mounted force; the sources describe a large Frankish infantry mass, and 4,758 objects are almost entirely trees rather than troops.",
+      "Player 2 holds a lone VILLAGER_MALE and only tents/pavilions for the 'camp' that Odo is supposed to burn — the plunder-laden Umayyad baggage camp central to the narrative is barely represented."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

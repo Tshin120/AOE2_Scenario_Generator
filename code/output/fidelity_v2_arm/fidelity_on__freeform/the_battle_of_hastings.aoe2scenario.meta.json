@@ -1,0 +1,106 @@
+{
+  "title": "The Battle of Hastings",
+  "description": "October 1066. William of Normandy's invasion army faces King Harold's Anglo-Saxon shield wall on Senlac Hill. The player commands the Norman force and must break the shield wall through feigned retreats and combined cavalry-archer assaults before nightfall ends the battle.",
+  "scenario_type": "battle",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "western_european",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+  "reachability_prompting": false,
+  "fidelity_rubric": false,
+  "fidelity_prompt": true,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.3",
+  "outcome": "success",
+  "run_id": "run_32d8cb87cc66",
+  "candidate": 1,
+  "attempts": 4,
+  "trigger_count": 13,
+  "output_path": "output/fidelity_v2_arm\\fidelity_on__freeform\\the_battle_of_hastings.aoe2scenario",
+  "timestamp_utc": "2026-08-11T12:16:26Z",
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 4.333,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.667,
+    "mean": 3.833,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so Norman and Anglo-Saxon architecture, unit bonuses and visual identity are left to chance — Franks/Britons were available and avoidable error.",
+      "4,800 TREE_OAK objects blanket a 120x120 map; Senlac Hill was an open ridge with a marshy bottom and cleared slopes, not dense forest, and heavy woods make the cavalry-versus-shield-wall action the brief describes impossible to stage.",
+      "Random-map economic furniture (10 gold mines, 8 stone mines, 16 forage bushes, 12 sheep, 8 deer) plus Town Centers, Blacksmith, Archery Range, Stable, Barracks and Monastery frame a base-building match rather than a single-day pitched battle; no army in 1066 was building a monastery on the field.",
+      "Player 2 receives 2 Guard Towers, and both sides a Town Center — no fortifications existed on Senlac Hill; Harold's strength was the unfortified shield wall itself.",
+      "Harold is represented by the KING unit, a militarily inert object, whereas Harold fought and died in the line; a renamed Champion or Teutonic Knight would have been a truer stand-in.",
+      "The 'Feigned Retreat Draws the Housecarls' trigger only prints text — no housecarls actually break formation or change ownership/stance, so the battle's decisive tactic is asserted rather than modelled."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 4.667,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 5.0,
+    "mean": 3.917,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so Norman (Frankish) and Anglo-Saxon (Briton/Teuton) architecture, unit bonuses and tech are left to chance — an entirely avoidable error since the engine offers appropriate civs",
+      "4,800 oak trees on a 120x120 map buries Senlac Hill in dense forest; the battle was fought on an open ridge and slope above marshy ground, and heavy woods also make the cavalry feigned-retreat manoeuvre the brief centres on physically awkward",
+      "Economic furniture inappropriate to a single-day pitched battle: 10 gold mines, 8 stone mines, 16 forage bushes, sheep and deer, plus a Town Center, Barracks, Stable, Archery Range and Blacksmith for the Normans and a Town Center and Monastery for Harold — Hastings involved no base-building on either side",
+      "Player 2's two Guard Towers give the Saxons stone fortification they did not possess; Harold's line was a shield wall of men only",
+      "The feigned-retreat turning point is only a DISPLAY_INSTRUCTIONS message fired by OBJECTS_IN_AREA — no Saxon units are actually made to break ranks and pursue, so the mechanic the brief promises is narrated rather than modelled",
+      "The Norman archers' opening volley, Harold's brothers Gyrth and Leofwine, and the Malfosse pursuit are absent"
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

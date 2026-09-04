@@ -1,0 +1,100 @@
+{
+  "title": "The Siege of Vienna",
+  "description": "September-October 1529. Suleiman the Magnificent's army arrives before Vienna's medieval walls. The player commands the garrison of German Landsknechts and Spanish arquebusiers under Niklas Graf Salm: countermine the Ottoman sappers, repel assaults on the Carinthian Gate, and hold until autumn rains and supply failure force the Ottoman withdrawal.",
+  "scenario_type": "defense",
+  "map_size": 144,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1529)",
+  "reachability_prompting": false,
+  "fidelity_rubric": false,
+  "fidelity_prompt": true,
+  "fidelity_prompt_hash": "131776fb33b105c4",
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.4",
+  "outcome": "success",
+  "run_id": "run_b90a7a06baa5",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 17,
+  "output_path": "output/fidelity_v2_arm_api\\fidelity_on__freeform\\the_siege_of_vienna.aoe2scenario",
+  "timestamp_utc": "2026-08-11T14:14:22Z",
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 3.0,
+    "setting": 4.0,
+    "events": 4.0,
+    "objective": 4.0,
+    "pedagogy": 4.0,
+    "mean": 3.75,
+    "issues_found": [
+      "The Ottoman assault force contains no infantry at all: CAMEL_RIDER x6, CAVALRY_ARCHER x6 and LIGHT_CAVALRY x4 carry the attacks on the Carinthian Gate, yet the Turks in this engine ship the JANISSARY, the very unit that led the historical storming parties. This is an avoidable substitution and the camel riders are wholly out of place before Vienna.",
+      "Suleiman is represented by a KING, a non-combat pageant unit; a renamed Elite Janissary or Cavalry Archer would have been a defensible stand-in for a sultan who was present with the army, and the King cannot participate in the siege in any way.",
+      "The 'Spanish arquebusiers' named in Salm's speech are placed as CROSSBOWMAN x8 — a firearms garrison rendered as bowmen when Teuton gunpowder infantry (Hand Cannoneer) was available; the placed content contradicts the text.",
+      "The Landsknecht core of the garrison is represented by PIKEMAN x8 and SPEARMAN x4 with a single CHAMPION; two-handed swordsmen or more Champions would better match a body of doppelsoldner, and 21 total defenders is a very thin abstraction of ~20,000.",
+      "No Danube or arm of the river anywhere on the map, and 1,414 oak trees dominate the terrain; Vienna's setting was a walled city on a major river with a cleared glacis, not deep woodland.",
+      "The first great assault is dated 29 September; the Ottomans had only just closed the investment (27 September) and the serious mine-and-assault phase belongs to 6-14 October. Salm's wounding is placed on 11 October rather than during the final assault of 14 October.",
+      "Victory at 300 seconds compresses three dated assaults, a countermine sequence and the onset of the rains into five minutes, which is a thin 'hold' for a three-week siege."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": true,
+      "player_civilizations": {
+        "1": "TEUTONS",
+        "2": "TURKS"
+      },
+      "unassigned_players": []
+    }
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 3.333,
+    "setting": 4.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 4.083,
+    "issues_found": [
+      "No Janissaries in the Ottoman order of battle: the Turks civilization ships the Janissary, the elite gunpowder infantry that actually led the assaults on the Carinthian Gate, yet Player 2's assault waves are Camel Riders, Light Cavalry and Cavalry Archers — a steppe/raiding force wholly unsuited to storming a breached curtain wall.",
+      "The garrison text promises 'Spanish arquebusiers' but the placed roster contains only Crossbowmen, Pikemen and Spearmen; Teutons have access to Hand Cannoneers, so the omission of any gunpowder defender is avoidable and directly contradicts the narration.",
+      "Only two Bombard Cannons plus Mangonels/Onagers represent the Ottoman siege train; the mangonel/onager choice is engine-appropriate but the 300-gun bombardment that reduced the medieval wall is under-represented at a scale of two guns.",
+      "No Danube (or any water) on a 144x144 map: Vienna's position on the Danube, the Ottoman bridging problem, and the flooded/muddy camp that ended the siege are geographically absent.",
+      "1,414 oak trees crowd the map, whereas the ground before Vienna was a deliberately cleared glacis — the suburbs were burned by the defenders precisely to deny cover.",
+      "Salm is a renamed Champion (acceptable substitution) but Suleiman is a KING unit, a passive non-combatant that reads as a throne-piece rather than a commander; a renamed cavalry hero would have served better.",
+      "Withdrawal dated 14 October; the final great assault fell on 14 October and the Ottoman army broke camp on 15-16 October, so the closing narration compresses the climax out of the scenario.",
+      "The city itself is six houses, a Town Center, Market and Monastery — far too thin for a defended imperial city of ~20,000 with a garrison of 17,000-20,000."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": true,
+      "player_civilizations": {
+        "1": "TEUTONS",
+        "2": "TURKS"
+      },
+      "unassigned_players": []
+    }
+  }
+}

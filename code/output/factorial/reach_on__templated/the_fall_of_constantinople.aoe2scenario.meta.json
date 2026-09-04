@@ -1,0 +1,131 @@
+{
+  "title": "The Fall of Constantinople",
+  "description": "April-May 1453. The player commands the last defenders of Byzantium under Constantine XI. Hold the Theodosian Walls against Mehmed II's siege: repair breaches from bombard fire, guard the sea walls along the Golden Horn, and survive repeated assaults. Defeat comes if the Hagia Sophia district falls; victory means holding until the final assault is broken.",
+  "scenario_type": "defense",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "hard",
+  "region": "mediterranean",
+  "player_civ": "eastern_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
+  "reachability_prompting": true,
+  "prompt_style": "templated",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_d2ccad7fd30d",
+  "candidate": 1,
+  "attempts": 2,
+  "trigger_count": 45,
+  "output_path": "output/factorial\\reach_on__templated\\the_fall_of_constantinople.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:47:26Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "material": 2.667,
+    "events": 2.0,
+    "anachronism": 2.0,
+    "pedagogy": 2.0,
+    "mean": 2.133,
+    "anachronisms_found": [
+      "SALADIN placed as Player Two's commander while dialogue names him 'Sultan Mehmed II' — Saladin died in 1193, was Kurdish/Ayyubid, and had nothing to do with the Ottoman siege of 1453; the engine offers no Mehmed, but a generic Sultan/Janissary or an unnamed hero would have avoided naming the wrong man entirely",
+      "TREE_PALM_FOREST x5 as the map vegetation — palms are wrong for Thracian/Marmara terrain around Constantinople",
+      "No water, sea walls, or Golden Horn feature despite the brief promising naval walls; the map is a purely landlocked fort",
+      "Hagia Sophia is represented by nothing at all — only a generic MONASTERY; a Wonder or Cathedral was available in the engine",
+      "SIEGE_WORKSHOP, UNIVERSITY, MARKET, STABLE and a full generic town-build order inside the walls read as a standard AoE2 base rather than the besieged, food-starved city"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 2.333,
+    "objective": 4.0,
+    "pedagogy": 2.667,
+    "mean": 2.583,
+    "issues_found": [
+      "Player 2's only named figure is the hero SALADIN, a 12th-century Kurdish Ayyubid sultan, standing in for Mehmed II (1453 Ottoman). The engine ships no Mehmed hero, but a renamed generic unit (Janissary, Elite Janissary, or a cavalry hero) was available, so the cross-era, cross-culture casting is avoidable error, and the victory condition even references SALADIN by name.",
+      "Both players are set to RANDOM civilization, so Byzantine architecture for Constantinople and Turkish architecture/units for the besiegers are left to chance; the defenders could easily appear as Britons or Aztecs.",
+      "No Ottoman force composition is visible in the roster: no Janissaries, no Bombard Cannons or Trebuchets owned by Player 2 at start, and the besieging army exists only as anonymous CREATE_OBJECT waves — the great bombard that actually breached the Theodosian Walls is nowhere represented as a placed object.",
+      "The brief promises sea walls along the Golden Horn, but there is no water, no dock, no ship, and no naval component anywhere on the 120x120 map; the Ottoman fleet and the boom across the Horn are simply absent.",
+      "TREE_PALM_FOREST is the only forest type placed — palm scrub is wrong for Thracian/Bosporan Constantinople.",
+      "Wave design ('enemies from the north', 'cavalry to the east', 'siege from the south') is a generic four-wave tower-defense pattern; it does not correspond to the historical axis of attack against the Mesoteichion in the Lycus valley, nor to the Kerkoporta breach.",
+      "The scenario's premise — that the defenders break the final assault and hold — inverts the actual outcome of 29 May 1453, and the dialogue ('Victory is within reach!', 'Dawn approaches!') reinforces that counterfactual without flagging it.",
+      "Player 1's arsenal (Blacksmith, University, Siege Workshop, Stable, Market, 10 villagers) is a standard build-up base rather than a starving, blockaded city with roughly 7,000 defenders and no relief."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 2.333,
+    "objective": 4.0,
+    "pedagogy": 3.0,
+    "mean": 2.583,
+    "issues_found": [
+      "Mehmed II is represented by the SALADIN hero — a 12th-century Kurdish Ayyubid sultan standing in for a 15th-century Ottoman. The engine ships no Mehmed, but a renamed generic Janissary, Champion or Cavalry Archer would have been the correct substitution; this is an avoidable ~270-year, wrong-dynasty error.",
+      "Both players are set to RANDOM civilization, so neither Byzantine nor Turkish architecture, unit bonuses or wonder are guaranteed — the Theodosian Walls and Hagia Sophia may render as any culture's buildings.",
+      "TREE_PALM_FOREST is used as the map's vegetation; palm forest is wrong for Thrace/the Bosphorus.",
+      "No water at all is placed: the Golden Horn, the sea walls, the boom chain and the Ottoman fleet's transfer of ships overland are entirely absent despite the brief promising 'guard the sea walls along the Golden Horn'.",
+      "The defenders' roster is generic Western European (MAN_AT_ARMS, CROSSBOWMAN) with no representation of Giustiniani's Genoese contingent or the Byzantine garrison's character; no Ottoman units are pre-placed at all, only the misplaced hero.",
+      "The signature historical element — Orban's great bombards battering the Mesoteichion and the resulting breaches — is not modelled; siege appears only as generic 'siege weapons from the south' text.",
+      "Attack directions (north, east, south) are arbitrary; the historical assaults concentrated on the Lycus valley/St Romanus gate sector on the land wall to the west.",
+      "The scenario's canonical outcome is a Byzantine victory with Mehmed's commander slain, which inverts the historical fall of the city on 29 May 1453; the 10-minute 'survive until dawn' compresses a 53-day siege without acknowledging it."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

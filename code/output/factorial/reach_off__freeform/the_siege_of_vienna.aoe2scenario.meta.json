@@ -1,0 +1,121 @@
+{
+  "title": "The Siege of Vienna",
+  "description": "September-October 1529. Suleiman the Magnificent's army arrives before Vienna's medieval walls. The player commands the garrison of German Landsknechts and Spanish arquebusiers under Niklas Graf Salm: countermine the Ottoman sappers, repel assaults on the Carinthian Gate, and hold until autumn rains and supply failure force the Ottoman withdrawal.",
+  "scenario_type": "defense",
+  "map_size": 144,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1529)",
+  "reachability_prompting": false,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_9abce7b6d5f8",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 20,
+  "output_path": "output/factorial\\reach_off__freeform\\the_siege_of_vienna.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:53:55Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 3.333,
+    "material": 3.0,
+    "events": 4.333,
+    "anachronism": 3.0,
+    "pedagogy": 4.0,
+    "mean": 3.533,
+    "anachronisms_found": [
+      "Player TWO fields 5 CAMEL_RIDERs before Vienna; camel cavalry was not a component of the 1529 Ottoman force operating in Lower Austria, and the engine's LIGHT_CAVALRY/CAVALRY_ARCHER (already present) adequately covers sipahis and akinci",
+      "The Ottoman infantry are CROSSBOWMAN x6 rather than JANISSARY, an available Turkish gunpowder unit; the janissary corps was the backbone of the assaults on the Carinthian Gate and its omission is avoidable",
+      "The defenders' 'Spanish arquebusiers' named in Salm's dialogue are represented by CROSSBOWMAN and SKIRMISHER; HAND_CANNONEER exists in the engine and is the obvious match for 1529 firearms",
+      "BATTERING_RAM, MANGONEL and ONAGER as the Ottoman siege train misrepresent a 1529 siege that turned on gunpowder mining and light field guns (Suleiman's heavy artillery was abandoned in the mud); a single BOMBARD_CANNON is the only gunpowder piece placed",
+      "Both commanders are generic KING units rather than any distinguishing hero object, so Salm and Suleiman exist only in text"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 3.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.5,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so architecture, unit bonuses and visual identity for the Habsburg garrison and the Ottoman army are left to chance — the engine offers Turks (with Janissaries and bombards) and Teutons/Spanish, so this was avoidable.",
+      "The text explicitly promises 'Spanish arquebusiers', yet the garrison's ranged arm is CROSSBOWMAN x6 and SKIRMISHER x4; the engine ships HAND_CANNONEER, the obvious 1529 gunpowder stand-in.",
+      "The Ottoman assault force is CROSSBOWMAN x6 with no gunpowder infantry — the Janissary corps, the single most characteristic element of Suleiman's army, has no representative (JANISSARY/HAND_CANNONEER exists in the engine).",
+      "Ottoman order of battle is cavalry-heavy (CAMEL_RIDER x5, LIGHT_CAVALRY x4, CAVALRY_ARCHER x6) for an operation that was fought as trench, mine and infantry assault work against a walled city; akinci raiders were used for foraging, not for storming the Carinthian Gate.",
+      "BOMBARD_CANNON and ONAGER overstate Ottoman firepower: Suleiman's heavy siege guns were bogged down and largely left behind on the Danube march, which is precisely why the Ottomans relied on mining.",
+      "Both commanders are represented by the generic KING object; acceptable as a renamed stand-in, but a KING is an odd cast for a city defence commander and for a Sultan in camp, and no attempt is made at a culturally appropriate hero unit.",
+      "3541 oak trees dominate the map; the Vienna glacis had in fact been cleared of cover and suburbs burned before the siege, so heavy forest right up to the works is misleading.",
+      "Salm's death as an instant-defeat condition slightly misstates history — Salm was mortally wounded during the siege yet Vienna held."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 3.0,
+    "setting": 2.0,
+    "events": 4.333,
+    "objective": 4.0,
+    "pedagogy": 4.333,
+    "mean": 3.333,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so architecture, unit bonuses and skins for a Habsburg city under Ottoman siege are left to chance; Teutons/Spanish and Turks were both available.",
+      "The text promises 'Landsknechts! Arquebusiers!' but the garrison contains no Hand Cannoneers at all — only Crossbowmen and Skirmishers — despite the engine shipping Hand Cannoneer, the obvious 1529 arquebus stand-in. This is an avoidable mismatch between narration and placed content.",
+      "The Ottoman roster likewise has no Janissary/Hand Cannoneer element, the most famous component of Suleiman's 1529 army; instead it is dominated by Camel Riders, Light Cavalry and Cavalry Archers, which overstates the mounted share of a siege force.",
+      "A Bombard Cannon plus Mangonel/Onager overstates Ottoman siege artillery at Vienna: Suleiman's heavy guns were largely lost or left behind on the muddy march, which is why he relied on mining — the very mechanic the scenario otherwise dramatises.",
+      "Defender numbers (3 Champions, 6 Pikemen, 6 Crossbowmen, 4 Skirmishers) are a token garrison for a force of roughly 20,000; acceptable as scale abstraction but no Landsknecht mass is conveyed.",
+      "Only one gate and a single 123-tile stone wall circuit; the Carinthian Gate is named only in text, with no distinguishing bastion or earthwork outworks that Salm actually threw up."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

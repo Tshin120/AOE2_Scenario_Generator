@@ -1,0 +1,129 @@
+{
+  "title": "The Exile of El Cid",
+  "description": "1081-1094. Banished from Castile by King Alfonso VI, Rodrigo Diaz de Vivar must survive as a mercenary captain: serve the Muslim king of Zaragoza against his rivals, win battles that restore his reputation, and finally conquer Valencia in his own name. The player's small retinue grows through victories; losing El Cid himself means defeat.",
+  "scenario_type": "story",
+  "map_size": 100,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "mediterranean",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/El_Cid",
+  "reachability_prompting": false,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_bf4ce08af13c",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 11,
+  "output_path": "output/factorial\\reach_off__freeform\\the_exile_of_el_cid.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:53:52Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.667,
+    "material": 3.0,
+    "events": 4.0,
+    "anachronism": 2.0,
+    "pedagogy": 3.0,
+    "mean": 2.933,
+    "anachronisms_found": [
+      "SALADIN placed as the enemy hero: Salah ad-Din was a Kurdish sultan of Egypt/Syria active c.1169-1193, a century later and 3,000 km away from Zaragoza's rivals or Valencia in 1081-1094. The dialogue calls the enemy 'Rival Raider Chief' and 'Governor of Valencia', so the hero unit directly contradicts the text; a generic Mameluke/Cavalry Archer or a scripted named King would have been available.",
+      "One enemy player serves as both the 'rival raiders' of the Ebro valley and the city of Valencia, so El Cid's actual opponents at Almenar/Tevar (Berenguer Ramon II of Barcelona and al-Hayib of Lerida, i.e. partly Christian Catalan forces) are collapsed into a single Saracen-style Muslim army.",
+      "CAMEL_RIDER x3 in an Iberian setting: camel cavalry was essentially absent from Andalusi and Taifa field armies; light javelin cavalry (jinetes) would be the regional norm, and the engine's Light Cavalry/Cavalry Archer units cover this better.",
+      "Al-Mu'tamin of Zaragoza, El Cid's actual employer and the pivot of the whole 1081-1086 period, exists only as a text line with no allied player or units, so the 'mercenary in Muslim service' premise is never enacted on the map."
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 4.0,
+    "pedagogy": 4.0,
+    "mean": 3.0,
+    "issues_found": [
+      "SALADIN is placed as the enemy leader standing in for both the 'Rival Raider Chief' and the 'Governor of Valencia'. Saladin is an Ayyubid ruler of Egypt/Syria a century later (d. 1193) and utterly unconnected to al-Andalus; a renamed generic Camel Rider, Mameluke or Champion would have been the correct, entirely avoidable substitution.",
+      "Both players' civilizations are left RANDOM, so architecture sets, unit rosters and tech could render Valencia as, e.g., Britons or Mongols; Spanish/Saracen (or Berber) assignment was available and free.",
+      "Al-Mu'tamin of Zaragoza speaks as El Cid's patron but exists only as text - there is no Zaragozan player, no allied Muslim army, and thus no representation of El Cid serving a Taifa king, the central fact of the exile years.",
+      "The same Player 2 hosts both the northern 'rival raider camp' and Valencia, so the historically distinct campaigns (against Aragon/Berenguer Ramon II in the Ebro, then the Levantine conquest) are collapsed into one enemy.",
+      "Valencia is reduced to a wall-and-castle assault decided by killing a hero; the historical capture was a twenty-month blockade and starvation siege ending in negotiated surrender after Ibn Jahhaf's coup - nothing in the triggers models attrition or blockade.",
+      "The 'rival raider camp' is an invented generic objective; El Cid's Zaragozan service produced named victories (Almenar 1082, Morella/Olocau 1084) that could have been referenced.",
+      "Enemy force of 9 Cavalry Archers plus Camel Riders is a steppe-style composition; Andalusi/Almoravid armies would be better rendered with light cavalry, spearmen and archers on foot."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 4.0,
+    "pedagogy": 4.0,
+    "mean": 3.0,
+    "issues_found": [
+      "SALADIN is placed as the enemy hero standing for the Governor of Valencia (and apparently also the Zaragozan rivals): Saladin was a Kurdish Ayyubid sultan active c. 1169-1193 in Egypt/Syria, an unrelated culture roughly a century after 1094. A renamed generic unit (e.g. a Camel Rider, Sultan, or King) or an Andalusi-flavoured stand-in was available and would have been correct.",
+      "Both players are set to RANDOM civilization, so architecture, unit lines and tech are unassigned; Spanish for El Cid's retinue and Saracens for Zaragoza/Valencia were obvious available choices for Iberia c. 1081-1094.",
+      "A single enemy player (Player 2) doubles as al-Mu'tamin's northern rivals AND the defenders of Valencia, collapsing two distinct, chronologically separated opponents into one force with one hero.",
+      "Valencia is represented only by a Castle, two Guard Towers and a stone wall line with 9 Cavalry Archers and 3 Camel Riders; the historical fall of Valencia was a nearly two-year blockade and starvation siege, not a mobile cavalry-archer defence, and no siege/starvation mechanic or timer represents that.",
+      "The 'rival raider camp' is an invented generic objective in place of the documented engagements of the Zaragoza service (Almenar 1082, Morella, the defeat of al-Mundhir and the Count of Barcelona).",
+      "TREE_PALM_FOREST across the map is a stylistic gesture toward the Mediterranean but reads as North African/desert rather than the Ebro valley terrain the narration places the first battle in."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

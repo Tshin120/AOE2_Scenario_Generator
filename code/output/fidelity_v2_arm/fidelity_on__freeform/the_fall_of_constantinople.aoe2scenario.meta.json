@@ -1,0 +1,105 @@
+{
+  "title": "The Fall of Constantinople",
+  "description": "April-May 1453. The player commands the last defenders of Byzantium under Constantine XI. Hold the Theodosian Walls against Mehmed II's siege: repair breaches from bombard fire, guard the sea walls along the Golden Horn, and survive repeated assaults. Defeat comes if the Hagia Sophia district falls; victory means holding until the final assault is broken.",
+  "scenario_type": "defense",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "hard",
+  "region": "mediterranean",
+  "player_civ": "eastern_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
+  "reachability_prompting": false,
+  "fidelity_rubric": false,
+  "fidelity_prompt": true,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.3",
+  "outcome": "success",
+  "run_id": "run_75a87f6cf5ee",
+  "candidate": 1,
+  "attempts": 2,
+  "trigger_count": 10,
+  "output_path": "output/fidelity_v2_arm\\fidelity_on__freeform\\the_fall_of_constantinople.aoe2scenario",
+  "timestamp_utc": "2026-08-11T12:15:51Z",
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 3.333,
+    "setting": 2.0,
+    "events": 3.667,
+    "objective": 5.0,
+    "pedagogy": 3.667,
+    "mean": 3.5,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so neither the Byzantine defenders nor the Ottoman besiegers get their correct bonuses, unique units, or architecture set — an avoidable error since the engine ships both Byzantines and Turks.",
+      "The final-assault narration promises 'Janissaries, Sipahi cavalry and the whole Ottoman host', but the Ottoman roster contains only MAN_AT_ARMS x10 as infantry; the editor offers the Janissary (and Hand Cannoneer), so the Sultan's elite corps is represented by a Feudal-age generic swordsman.",
+      "The Golden Horn episode has no naval component whatsoever: no docks, no galleys, no transports, no fire ships for either side, despite the text describing ships dragged overland and 'Ottoman marines' probing the sea walls.",
+      "TREE_PALM_FOREST x6 is vegetation wrong for Thrace/the Bosphorus; a Mediterranean or oak/pine set would be plausible.",
+      "Defender force composition is too symmetrical: ~30 Byzantine units against ~32 Ottoman units, whereas the sources describe roughly 7,000 defenders against 60,000-80,000 besiegers; the disparity that defined the siege is absent.",
+      "Byzantine roster includes KNIGHT x4 and CHAMPION x1 but no gunpowder or Byzantine-flavoured troops; the Genoese contingent under Giustiniani is only implied by a renamed unit and a trigger.",
+      "Hagia Sophia is represented by a MONASTERY (two are placed), and the defeat trigger fires on a monastery generically — the engine offers the Wonder/temple objects that would read more clearly as the great church."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 3.667,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 4.667,
+    "pedagogy": 4.0,
+    "mean": 3.583,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so the Ottoman besiegers may appear as any culture and the Byzantine defenders lose their civ-specific walls/architecture — avoidable, since the engine ships both Byzantines and Turks",
+      "The narration promises 'Janissaries' in the final assault, but the Ottoman infantry placed are MAN_AT_ARMS x10 — the engine's Hand Cannoneer (or at minimum Two-Handed Swordsman/Champion) was available and is the standard stand-in for Janissaries",
+      "No ships, docks, or water-based force anywhere despite the Golden Horn sea-wall phase and the explicit reference to hauling the fleet overland; the 'Ottoman marines' arrive as land units created by trigger",
+      "TREE_PALM_FOREST and desert-style tents/pavilions give the map a Near-Eastern desert flavour rather than the Thracian/Marmara landscape of Constantinople",
+      "Ottoman host of roughly 27 units against a garrison of 30 badly misrepresents the historical disparity (~80,000 besiegers vs ~7,000 defenders); the besieger is not even numerically superior",
+      "Hagia Sophia is a MONASTERY (one of two identical ones), a weak signature for the city's cathedral when a Wonder or Cathedral-scale building was available",
+      "Only one gate pair and 49 wall segments stand in for the triple Theodosian line — no moat, no outer wall, no distinction between land and sea walls",
+      "Victory text asserts the city 'holds against the Sultan's host', a counterfactual outcome only lightly hedged by 'for another day'"
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

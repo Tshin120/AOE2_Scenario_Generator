@@ -1,0 +1,127 @@
+{
+  "title": "The Battle of Hastings",
+  "description": "October 1066. William of Normandy's invasion army faces King Harold's Anglo-Saxon shield wall on Senlac Hill. The player commands the Norman force and must break the shield wall through feigned retreats and combined cavalry-archer assaults before nightfall ends the battle.",
+  "scenario_type": "battle",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "western_european",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+  "reachability_prompting": true,
+  "prompt_style": "templated",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_265603e4928b",
+  "candidate": 1,
+  "attempts": 2,
+  "trigger_count": 28,
+  "output_path": "output/factorial\\reach_on__templated\\the_battle_of_hastings.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:45:59Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "material": 2.667,
+    "events": 3.667,
+    "anachronism": 2.667,
+    "pedagogy": 3.0,
+    "mean": 3.2,
+    "anachronisms_found": [
+      "Player Two (Anglo-Saxon) owns a CASTLE, 29 STONE_WALL segments, 2 gates and 4 GUARD_TOWERs: Harold's army at Senlac fought in the open on a ridge with no fortifications, and the stone donjon/castle is precisely the Norman innovation the Saxons lacked in 1066",
+      "Saxon STABLE (and the implied cavalry arm) is wrong: Harold's huscarls and fyrd fought dismounted; the Anglo-Saxon army used no mounted shock troops",
+      "GUARD_TOWER is a post-1066 fortification type in England, and stone gatehouses of this kind did not exist in Anglo-Saxon Sussex",
+      "4,800 TREE_OAK tiles create dense woodland over a battlefield that was open downland with marshy ground at the foot of the ridge - the map's own narration mentions a 'marshy field' the terrain does not deliver",
+      "Norman side is given a full TOWN_CENTER, MILL and HOUSEs; the Normans had a hastily thrown-up motte at Hastings, not a settled agricultural town, though the engine's building list partly excuses this",
+      "King Harold is represented by the generic KING unit, a non-combatant piece, rather than a fighting commander among his huscarls"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "setting": 2.0,
+    "events": 3.0,
+    "objective": 4.0,
+    "pedagogy": 3.667,
+    "mean": 3.25,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so architecture, unit skins and bonuses may render as Aztec, Japanese or Korean rather than Frankish/Teutonic (Norman) and Britons (Anglo-Saxon) — an entirely avoidable omission.",
+      "Player 2 owns a CASTLE, 29 STONE_WALL segments, 2 gates and 4 GUARD_TOWERs, plus 'Close Gates' and 'Gate Defense' triggers. Harold's army fought in the open on a bare ridge with no fortification whatsoever; the secondary objective 'Raze the Saxon Castle behind the ridge' invents a structure that did not exist.",
+      "4,800 TREE_OAK tiles and 25 cliffs on a 120x120 map turn Senlac into dense forest and broken cliff country; the field was open downland with marshy ground at the foot of the slope, which the narration itself mentions but the terrain contradicts.",
+      "The Saxon side is given a STABLE and an ARCHERY_RANGE despite the whole tactical point being that Harold's force was dismounted infantry with very few archers.",
+      "The feigned retreat — the scenario's stated central mechanic — exists only in dialogue text; the only Saxon movement triggers are a generic 'Enemy Patrol' and an 'Enemy Sortie' PATROL, with no lure-and-envelop scripting.",
+      "Norman force is 8 knights, 8 archers, 8 men-at-arms with a Town Center, houses and a Mill — a settlement economy rather than an invasion beachhead; no ships or camp palisade for the Pevensey/Hastings base referenced in the defeat text.",
+      "Timer victory at 900s awards the Normans the field merely for surviving to 'nightfall'; historically the battle was decided by Harold's death, and had the Saxons held until dark the invasion would have been in jeopardy."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "setting": 2.0,
+    "events": 3.333,
+    "objective": 4.0,
+    "pedagogy": 3.667,
+    "mean": 3.333,
+    "issues_found": [
+      "Both players' civilizations are left as RANDOM, so architecture and unit bonuses may render the Normans as Aztecs or Koreans; Franks/Normans and Britons/Celts were available and should have been assigned explicitly.",
+      "4,800 oak trees on a 120x120 map turns the open downland of Senlac/Caldbec Hill into dense forest; the battle was fought on bare open slopes with marsh at the foot.",
+      "The Anglo-Saxon side is given a CASTLE, 29 STONE_WALL segments, 2 gates and 4 GUARD_TOWERs. Harold's army held an unfortified ridge; there was no fortification at Hastings, and the 'Raze the Saxon Castle' objective invents a structure outright.",
+      "Player 2 is given a STABLE and ARCHERY_RANGE, implying Saxon cavalry and archers when the sources are emphatic that Harold's army fought dismounted with almost no archery.",
+      "Norman archers (8) are underweighted relative to knights and infantry given that the missile arm was the decisive component of the combined assaults the brief itself stresses.",
+      "The defeat condition on the Norman TOWN_CENTER ('beachhead camp has fallen') invents a Saxon counter-raid on Hastings/Pevensey that never occurred during the battle.",
+      "The much-cited feigned retreat exists only in dialogue; no trigger (retreat/lure/re-attack scripting) models it, so the player never has to execute the tactic the brief names as the core mechanic.",
+      "The 900-second 'nightfall' victory lets the player win by merely surviving, whereas historically dusk came only after the shield wall had broken and Harold was dead."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

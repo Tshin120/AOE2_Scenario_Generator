@@ -1,0 +1,124 @@
+{
+  "title": "The Battle of Hastings",
+  "description": "October 1066. William of Normandy's invasion army faces King Harold's Anglo-Saxon shield wall on Senlac Hill. The player commands the Norman force and must break the shield wall through feigned retreats and combined cavalry-archer assaults before nightfall ends the battle.",
+  "scenario_type": "battle",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "western_european",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+  "reachability_prompting": false,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_15a8fba3b1fa",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 13,
+  "output_path": "output/factorial\\reach_off__freeform\\the_battle_of_hastings.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:51:54Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "material": 3.0,
+    "events": 4.0,
+    "anachronism": 4.0,
+    "pedagogy": 4.0,
+    "mean": 3.8,
+    "anachronisms_found": [
+      "Player Two's Harold is only a generic KING unit — AoE2 lacks a Harold hero, but a renamed/garrisoned unique unit or at least a labelled hero-type would have been closer; as built the Saxon king is a non-combatant palace figure rather than a warrior-king who fought on foot in the line",
+      "Anglo-Saxon SKIRMISHER x10 — the Saxon army at Hastings was famously almost devoid of missile troops (the archers were on the Norman side); giving Harold a tenth of his force as javelineers inverts the battle's key asymmetry",
+      "TOWN_CENTER for both sides on a one-day battlefield: the Normans built a temporary motte at Hastings, not a town centre, and the Saxons had no settlement on Senlac Hill",
+      "Production buildings (STABLE, ARCHERY_RANGE, BARRACKS, BLACKSMITH) imply on-site recruitment during a six-hour engagement",
+      "2560 oak trees on a 120x120 map buries Senlac Hill in forest; the actual field was open slope with the Andredsweald only to the Saxon rear"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.75,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so architecture, unit skins and bonuses could resolve to Aztec, Japanese or Mongol - avoidable, since Franks/Britons were available for Normans and Saxons respectively",
+      "2,560 oak trees dominate a 120x120 map; Senlac Hill was an open ridge fronted by a shallow valley, and a dense forest is the wrong tactical stage for cavalry charges and feigned retreats",
+      "Both armies are given Town Centers, Monasteries and Barracks; Hastings was a one-day field engagement with no settlement, fortification or production base on either side",
+      "Norman force (10 knights, 10 archers, 10 spearmen) is barely half the Saxon strength (20 champions, 20 spearmen, 10 skirmishers), whereas the sources put the two hosts at roughly comparable size, with the Normans holding the advantage in horse and bow",
+      "The 'Norman Reinforcements' trigger ('Fresh Norman riders arrive from the coast') is an invention - William committed his whole army at Hastings and received no reinforcement during the battle",
+      "Saxon skirmishers overstate Anglo-Saxon missile capability; Harold's army is noted for having almost no archers at Hastings",
+      "Harold is represented by the generic KING unit, an immobile non-combatant, rather than a renamed fighting unit - the historical Harold fought in the shield wall"
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 4.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.75,
+    "issues_found": [
+      "Both players are set to RANDOM civilization, so Norman and Anglo-Saxon architecture and unit bonuses are left to chance — the engine offers Franks/Britons (or Vikings/Celts) as obvious, avoidable choices for 1066 Normandy and England.",
+      "2,560 TREE_OAK on a 120x120 map turns Senlac Hill into dense forest; Hastings was fought on an open ridge above a shallow valley, and heavy woods also make the scripted downhill pursuit/feigned-retreat manoeuvre geographically implausible.",
+      "Harold Godwinson is represented by a KING unit — a non-combatant with no attack — rather than a renamed CHAMPION or a Teutonic/Frankish infantry hero; the historical Harold fought and died in the shield wall.",
+      "Player 2 receives 10 SKIRMISHERS; Anglo-Saxon missile troops were negligible at Hastings, and the engine's spearmen/champions alone would have represented the housecarl-and-fyrd shield wall more faithfully.",
+      "The 'Norman Reinforcements' trigger inventing 'fresh Norman riders arrive from the coast' is not attested; no reinforcements reached William during the battle — his whole force was already engaged.",
+      "Gold mines, stone mines, forage bushes and a full economic building set (Town Center, Blacksmith, Stable, Archery Range, Monastery) for both sides imply a settled base-building contest rather than a single-day pitched battle between an invasion camp and a marching army."
+    ],
+    "combatants_precondition": {
+      "passed": true,
+      "placed_heroes": [
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": []
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

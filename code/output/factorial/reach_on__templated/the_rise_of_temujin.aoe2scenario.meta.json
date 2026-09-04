@@ -1,0 +1,132 @@
+{
+  "title": "The Rise of Temujin",
+  "description": "1186-1206. Follow Temujin's unification of the Mongol tribes on the steppe: rescue his wife Borte from the Merkits, forge and then break the alliance with Jamukha, defeat the Naiman confederation, and be proclaimed Genghis Khan at the kurultai. The player begins with a small warband and must grow through raids, alliances, and decisive battles.",
+  "scenario_type": "story",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "steppe",
+  "player_civ": "central_asian",
+  "enemy_civ": "central_asian",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+  "reachability_prompting": true,
+  "prompt_style": "templated",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_4de499706c0e",
+  "candidate": 1,
+  "attempts": 2,
+  "trigger_count": 57,
+  "output_path": "output/factorial\\reach_on__templated\\the_rise_of_temujin.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:47:50Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 3.0,
+    "material": 3.0,
+    "events": 3.667,
+    "anachronism": 2.0,
+    "pedagogy": 3.0,
+    "mean": 2.933,
+    "anachronisms_found": [
+      "ATTILA_THE_HUN placed as the hero of Player TWO (the Merkit/Naiman/Jamukha side) — Attila died in 453 AD, roughly 730 years before Temujin's rise; the engine offers plenty of alternative hero or generic cavalry-archer stand-ins, so this was avoidable",
+      "Player TWO's CASTLE, KEEP, GUARD_TOWERs and 10 STONE_WALL segments — the Merkit and Naiman were pastoral steppe confederations whose 'strongholds' were fortified camps and wagon laagers, not European stone donjons; palisade/watch-tower/yurt combinations were available in the engine",
+      "CHAMPION x2 in the steppe enemy roster — heavy European two-handed infantry has no place in a Merkit/Naiman order of battle, which was overwhelmingly horse archers and light lancers",
+      "KING and QUEEN units used to represent Toghrul Khan and Borte — European monarchic iconography for steppe khans and a khatun; the engine's generic villager/monk/hero options would be less jarring",
+      "GATE_NORTH_TO_SOUTH and stone gatehouses on a nomadic tribal camp"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 3.0,
+    "objective": 3.0,
+    "pedagogy": 3.0,
+    "mean": 2.5,
+    "issues_found": [
+      "Player 2's commander is ATTILA_THE_HUN, a 5th-century Hunnic figure, standing in for Jamukha/the Naiman Tayang Khan — an unrelated era and culture, and avoidable since a renamed generic cavalry unit or another mounted hero would have served",
+      "Both players' civilizations are left RANDOM, so architecture and unit tech tree may render as Frankish, Japanese, Teutonic, etc. — indefensible when Mongols (or Huns/Tatars) are in the engine",
+      "Player 2 fields CHAMPION x2, SPEARMAN x10, STONE_WALL x10, CASTLE, KEEP, GUARD_TOWER x2 and gates: a stone-fortified, heavy-infantry enemy for Merkit/Naiman nomads who had no masonry strongholds and fought as horse archers",
+      "The climactic 'Naiman stronghold, walls dark against the sky' siege is invented; the decisive Naiman defeat (Chakirmaut, 1204) was an open-steppe encirclement on Naqu Cliff, not a fortress assault",
+      "Borte's rescue — the brief's opening turning point — is reduced to finding 'proof of Borte's captivity'; no Borte object or rescue condition exists anywhere in the roster or triggers",
+      "The kurultai of 1206 and the proclamation as Genghis Khan, named in the brief, are not encoded in any victory condition; victory is simply killing the enemy hero or razing a castle",
+      "Toghrul (Wang Khan) of the Kereit is represented by generic KING/QUEEN units and, per the defeat condition, his death loses the game — historically Temujin destroyed Toghrul in 1203, so an ally-must-survive condition contradicts the outcome",
+      "Player 1's hero is named GENGHIS_KHAN from the outset while the narration calls him Temujin in 1186 — a minor anachronism the engine forces, but the KING unit also sitting in Temujin's warband has no historical referent"
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "ATTILA_THE_HUN",
+        "GENGHIS_KHAN"
+      ],
+      "unsupported_heroes": [
+        "ATTILA_THE_HUN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 3.0,
+    "objective": 3.0,
+    "pedagogy": 3.0,
+    "mean": 2.5,
+    "issues_found": [
+      "Player 2's leader is ATTILA_THE_HUN, a 5th-century Hunnic king, standing in for Jamukha/the Naiman Tayang Khan — an unrelated era and culture, and avoidable since a renamed generic cavalry or hero unit (as the scenario already does for Toghrul with KING and Borte with QUEEN) would have served",
+      "Both active players are set to RANDOM civilization, so architecture and unit lines may render as Franks, Britons or anything else rather than Mongols/Huns; the yurt props are the only steppe cue and can be contradicted by European buildings",
+      "Enemy roster is a stone Castle, Keep, Guard Towers, Stone Walls and Gates plus 10 SPEARMAN and 2 CHAMPION — a masonry fortress with infantry line troops misrepresents the Merkit/Naiman, who were mobile steppe confederations; the Naiman were broken in the open field at Chakirmaut, not in a siege",
+      "The 'Naiman stronghold' assault that occupies the final act is invented; no such fortress storming occurred in Temujin's unification wars",
+      "Defeat fires if the KING (Toghrul Khan) dies, yet historically Temujin broke with Toghrul and the Kereit were destroyed in 1203 — making his survival a loss condition inverts the actual outcome",
+      "Alternative victory on destroying Player 2's CASTLE keys the win to an arbitrary building rather than the kurultai proclamation or the defeat of a named rival",
+      "Borte's rescue from the Merkits, named as the opening driver in the brief and dialogue, has no encoded objective or victory/defeat hook — the QUEEN belongs to Player 3 alongside the KING (Toghrul) rather than being an object of rescue"
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "ATTILA_THE_HUN",
+        "GENGHIS_KHAN"
+      ],
+      "unsupported_heroes": [
+        "ATTILA_THE_HUN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

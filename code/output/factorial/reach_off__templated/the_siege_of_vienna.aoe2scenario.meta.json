@@ -1,0 +1,139 @@
+{
+  "title": "The Siege of Vienna",
+  "description": "September-October 1529. Suleiman the Magnificent's army arrives before Vienna's medieval walls. The player commands the garrison of German Landsknechts and Spanish arquebusiers under Niklas Graf Salm: countermine the Ottoman sappers, repel assaults on the Carinthian Gate, and hold until autumn rains and supply failure force the Ottoman withdrawal.",
+  "scenario_type": "defense",
+  "map_size": 144,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1529)",
+  "reachability_prompting": false,
+  "prompt_style": "templated",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_74045904d99f",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 45,
+  "output_path": "output/factorial\\reach_off__templated\\the_siege_of_vienna.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:47:18Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "material": 2.0,
+    "events": 2.0,
+    "anachronism": 1.0,
+    "pedagogy": 2.0,
+    "mean": 1.8,
+    "anachronisms_found": [
+      "SALADIN placed as the entire enemy player's representation: Saladin died in 1193, roughly 335 years before the 1529 siege, and was an Ayyubid Kurd, not an Ottoman sultan. The engine offers Turkish-civ Janissaries, a generic Sultan-substitute hero, or simply an unnamed Elite Janissary/cavalry commander instead.",
+      "Objective text 'Slay the enemy commander, Saladin's heir to the campaign' names Saladin explicitly in-fiction, compounding the error rather than reskinning it.",
+      "Player ONE garrison is MAN_AT_ARMS and CROSSBOWMAN — Feudal-Age unit types, whereas 1529 Vienna was held by pike-and-shot Landsknechts and Spanish arquebusiers; the engine's Pikeman/Halberdier, Two-Handed Swordsman and Hand Cannoneer were available and unused.",
+      "No gunpowder anywhere on the map (no Hand Cannoneer, Bombard Tower, Bombard Cannon), despite the brief specifically promising Spanish arquebusiers and despite Ottoman heavy artillery being central to 1529 siege warfare.",
+      "6,667 oak trees across a 144x144 map turns the Vienna glacis and Danube plain into a dense forest; the historical siege was fought over cleared suburbs the Viennese themselves burned down.",
+      "Generic Age-of-Empires economy buildings (Monastery, Market, University, Mill, Archery Range, Stable, Houses, Town Center) with Villagers inside a besieged walled city, rather than a purely military garrison layout.",
+      "Victory condition 'Survive the Ottoman assault until dawn (10:00)' compresses a three-week siege (27 Sept – 14 Oct) into a single night, contradicting the scenario's own autumn-rains framing."
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 1.0,
+    "setting": 2.0,
+    "events": 2.333,
+    "objective": 4.0,
+    "pedagogy": 2.0,
+    "mean": 2.333,
+    "issues_found": [
+      "The entire Ottoman side consists of a single SALADIN hero — a 12th-century Ayyubid sultan standing in for Suleiman the Magnificent, a figure of the wrong culture and four centuries out of period; the objective text even calls him 'Saladin's heir to the campaign'.",
+      "Niklas Graf Salm appears only as a dialogue speaker; no unit (renamed hero or elite infantry) represents him, so the defending commander has no presence on the map.",
+      "The garrison is CROSSBOWMAN and MAN_AT_ARMS, not the Landsknechts and Spanish arquebusiers of the brief; AoE2 ships both Landsknecht and Hand Cannoneer, so the gunpowder-and-pike character of the 1529 defence was avoidably omitted.",
+      "Both players are set to RANDOM civilization, so architecture and unit look are unassigned — neither Central European nor Turkish.",
+      "6,667 oak trees on a 144x144 map turn the Vienna glacis into dense forest; there is no Ottoman siege camp, no artillery park, and no urban interior beyond a Town Center, Castle and eight towers.",
+      "No countermining is modelled — the Ottoman sapper mines and the defenders' counter-galleries, the defining tactical feature of this siege, are entirely absent.",
+      "The Carinthian Gate is mentioned in dialogue but is not a distinguished structure or trigger target; the four gates are undifferentiated GATE_NORTH_TO_SOUTH pieces.",
+      "The four generic waves (infantry, then 'cavalry from the east', then siege engines, then all-out attack) are an arcade escalation, not the historical sequence of mine detonations and repeated breach assaults at the Kärntnertor.",
+      "'Survive the Ottoman assault until dawn (10:00)' compresses a three-week siege ending in an autumn withdrawal into a single night, misdating the event's duration.",
+      "'The garrison prepares for a fair fight' and the alternate 'eliminate all player 2 objects' victory path both cut against a siege in which a heavily outnumbered garrison simply had to endure.",
+      "Wave spawn triggers create forces for a player whose only placed object is Saladin, so the besieging army has no historically flavoured standing presence (no Janissary/Hand Cannoneer garrison camp)."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 1.0,
+    "setting": 1.333,
+    "events": 2.333,
+    "objective": 4.0,
+    "pedagogy": 2.0,
+    "mean": 2.167,
+    "issues_found": [
+      "The Ottoman commander is the hero SALADIN — a 12th-century Kurdish Ayyubid sultan standing in for Suleiman the Magnificent, four centuries and a different dynasty removed; the engine offers no Suleiman, but a renamed generic Elite Janissary/cavalry unit was available and would have been correct.",
+      "The objective text compounds the error by inventing a relationship: 'Slay the enemy commander, Saladin's heir to the campaign' — an assertion no source supports.",
+      "Player 2 has no placed army at all beyond the hero; the entire besieging force exists only as trigger CREATE_OBJECT calls, so no identifiable Ottoman order of battle (janissaries, akinci, sappers, heavy guns) is visible in the roster.",
+      "The garrison is CROSSBOWMAN x12 and MAN_AT_ARMS x7 — no gunpowder units whatever, although the brief specifies Spanish arquebusiers and the engine ships Hand Cannoneers; the Landsknecht pike-and-halberd blocks are likewise absent when Pikemen/Two-Handed Swordsmen were available.",
+      "Niklas Graf Salm exists only in a dialogue line; no unit, renamed or otherwise, represents the defending commander.",
+      "Both players' civilizations are RANDOM, so Viennese/German architecture and Ottoman architecture are left to chance rather than assigned.",
+      "The map is 6,667 oak trees with deer and sheep — a wilderness forest, not the Vienna glacis, suburbs (which the defenders burned) and Danube frontage.",
+      "The countermining duel against Ottoman sappers, the single most distinctive feature of the 1529 defence and named in the brief, appears nowhere in the triggers or roster.",
+      "'Survive the Ottoman assault until dawn (10:00)' recasts a six-week autumn siege as a single night's fight.",
+      "The 'Wave 1 Announce' text has enemies approaching from the north and cavalry 'from the east', with no reference to the Carinthian Gate sector southwest of the city where the real breaches were made, despite the dialogue naming it.",
+      "'The garrison prepares for a fair fight' is a placeholder line at odds with a 17,000-man garrison facing an army many times its size."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

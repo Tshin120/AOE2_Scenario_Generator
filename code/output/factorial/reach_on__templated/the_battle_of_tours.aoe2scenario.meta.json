@@ -1,0 +1,140 @@
+{
+  "title": "The Battle of Tours",
+  "description": "October 732. Charles Martel's Frankish infantry must hold the wooded high ground between Tours and Poitiers against the Umayyad cavalry of Abd al-Rahman. A third force of Aquitanian allies under Duke Odo can be rallied to strike the enemy camp. Victory requires repelling the cavalry charges and forcing the invaders' withdrawal.",
+  "scenario_type": "battle",
+  "map_size": 120,
+  "players": 3,
+  "difficulty": "hard",
+  "region": "northern_europe",
+  "player_civ": "western_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+  "reachability_prompting": true,
+  "prompt_style": "templated",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_d31f5b86e1cb",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 28,
+  "output_path": "output/factorial\\reach_on__templated\\the_battle_of_tours.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:45:09Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 3.0,
+    "material": 3.0,
+    "events": 4.333,
+    "anachronism": 2.0,
+    "pedagogy": 3.0,
+    "mean": 3.067,
+    "anachronisms_found": [
+      "WILLIAM_THE_CONQUEROR stands in for Charles Martel — a Norman duke of 1066, 334 years after Tours, and mounted rather than the dismounted Frankish commander the dialogue describes",
+      "SALADIN represents Abd al-Rahman al-Ghafiqi — an Ayyubid Kurd of the 1180s, four and a half centuries too late and from the wrong dynasty/theatre",
+      "EL_CID represents Duke Odo of Aquitaine — a Castilian of the 1090s; a generic Frankish/Aquitanian hero or simple named cavalry would have been far less misleading",
+      "Player Two's camp is a stone CASTLE with 99 STONE_WALL segments and 4 GUARD_TOWERs; the Umayyad force was a mobile raiding army whose camp was a tented laager, and the historically decisive raid on it worked precisely because it was unfortified",
+      "PIKEMAN x8 for the Franks — the pike formation is a 14th-century development; the spearman/champion mix alone would have carried the shield-wall idea",
+      "12 CAMEL_RIDERs in the Loire valley overstates camelry; Abd al-Rahman's mounted arm was Arab and Berber horse",
+      "MONASTERY buildings on both sides in 732 (an Umayyad monastery especially) are out of place"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 4.667,
+    "pedagogy": 4.0,
+    "mean": 3.167,
+    "issues_found": [
+      "Charles Martel is represented by the WILLIAM_THE_CONQUEROR hero — a Norman duke of 1066, over three centuries later and of the wrong polity; a renamed generic Champion or Teutonic-style infantry hero would have been correct and was available.",
+      "Abd al-Rahman al-Ghafiqi is represented by SALADIN, an Ayyubid sultan of the 1170s-90s, not an Umayyad governor of al-Andalus in 732 — wrong dynasty and wrong century.",
+      "Duke Odo of Aquitaine is represented by EL_CID, an 11th-century Castilian; wrong person, wrong century, wrong region.",
+      "Both active players are set to RANDOM civilization, so Frankish and Umayyad architecture, unit rosters and bonuses are left to chance rather than assigned (Franks and Saracens/Berbers being obvious choices).",
+      "The Umayyad raiding column is given a CASTLE, 99 STONE_WALL segments, a gate and 4 GUARD_TOWERs — the invaders were a mobile plundering army with a wagon-and-tent camp, not a fortified stone position; the TENT/PAVILION camp objects were correctly used for Odo's force but not for the enemy.",
+      "Player 1 defeat is tied to loss of a TOWN_CENTER; the Franks fielded a field army on wooded high ground, they had no town centre to lose at the battle site.",
+      "CAMEL_RIDER x12 overstates camelry: the Andalusi/Berber force was overwhelmingly horse cavalry with some light infantry."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 4.0,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.25,
+    "issues_found": [
+      "Charles Martel is represented by WILLIAM_THE_CONQUEROR, a Norman duke of 1066 — over three centuries after Tours; a renamed generic Champion or Teutonic-style infantry hero would have been correct and was available.",
+      "Abd al-Rahman al-Ghafiqi is represented by SALADIN, a 12th-century Ayyubid Kurd of an entirely different polity and era than the Umayyad governor of al-Andalus.",
+      "Duke Odo of Aquitaine is represented by EL_CID, an 11th-century Castilian — wrong century and wrong realm; Odo was the Frankish/Aquitanian duke who had already fought at the Garonne.",
+      "Both active players are set to RANDOM civilization, so Frankish and Andalusi/Berber architecture and unit availability are left to chance rather than assigned (Franks and Saracens were both available).",
+      "The Umayyad camp is built as a CASTLE with 99 STONE_WALL segments and 4 GUARD_TOWERs; Abd al-Rahman's force was a raiding army encamped in the open with a baggage/plunder train, not a stone fortress in Gaul.",
+      "12 CAMEL_RIDERs for the Umayyad host at Tours; the invading force in Aquitaine was horse cavalry, and camels are a gratuitous orientalisation given Light Cavalry/Knight substitutes exist.",
+      "PIKEMAN among the Frankish line is a Late-Medieval anachronism for 732, though within the engine's abstraction of a shield wall.",
+      "The Aquitanian ally (player THREE) fields only 15 men and three tents with no real camp presence, understating Odo's role."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "SALADIN",
+        "WILLIAM_THE_CONQUEROR"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

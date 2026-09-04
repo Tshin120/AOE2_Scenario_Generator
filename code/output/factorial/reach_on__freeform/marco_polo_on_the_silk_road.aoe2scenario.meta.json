@@ -1,0 +1,136 @@
+{
+  "title": "Marco Polo on the Silk Road",
+  "description": "1271-1275. Escort the young Marco Polo, his father Niccolo, and their trade caravan across the deserts and mountain passes of Central Asia to the court of Kublai Khan. Bandit raiders and harsh terrain threaten the route; the caravan's pack animals must survive. Victory requires bringing Marco alive to the Khan's summer palace at Shangdu.",
+  "scenario_type": "escort",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "medium",
+  "region": "desert",
+  "player_civ": "western_european",
+  "enemy_civ": "central_asian",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Marco_Polo",
+  "reachability_prompting": true,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_19a4004e2527",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 12,
+  "output_path": "output/factorial\\reach_on__freeform\\marco_polo_on_the_silk_road.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:50:53Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "material": 3.0,
+    "events": 4.0,
+    "anachronism": 2.0,
+    "pedagogy": 3.0,
+    "mean": 2.8,
+    "anachronisms_found": [
+      "EL_CID used as (presumably) Marco Polo — Rodrigo Diaz de Vivar died in 1099, nearly two centuries before 1271, and belongs to Iberia, not the Silk Road",
+      "FREDERICK_BARBAROSSA used as (presumably) Niccolo Polo — a Hohenstaufen Holy Roman Emperor who drowned in 1190; a Venetian merchant is neither an emperor nor a 12th-century figure",
+      "KNIGHT x2 and SPEARMAN x2 as caravan escort — the Polo party was a tiny merchant company travelling under Mongol safe-conduct, not a mounted Latin knightly escort",
+      "ARCHERY_RANGE x2 in the bandit camps — a permanent European-style military production building is out of place for nomadic desert raiders whose camps are otherwise yurts",
+      "SHEEP x3 standing in for the caravan's pack animals, when the engine offers Trade Carts and camel units far better suited to a Silk Road caravan",
+      "TOWN_CENTER x1 representing Kublai Khan's summer palace at Shangdu — a generic Western-looking Dark Age structure for the Yuan imperial residence",
+      "Kublai Khan himself is entirely absent from the roster despite being the destination and the narrative payoff"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 1.667,
+    "setting": 2.333,
+    "events": 3.667,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.167,
+    "issues_found": [
+      "Marco Polo is represented by the EL_CID hero — an 11th-century Castilian mounted warlord, wrong culture and wrong century, and avoidable since the editor permits renaming a generic villager, trade cart or monk to stand in for a Venetian merchant.",
+      "Niccolo Polo is represented by FREDERICK_BARBAROSSA, a 12th-century Holy Roman Emperor; again an unrelated figure where a renamed generic unit was available.",
+      "Kublai Khan is never placed. The destination is only a GAIA TOWN_CENTER with two yurts and flags; the Khan whose court is the whole point of the journey has no representation at all (Genghis Khan hero or a renamed cavalry/monk unit could have served).",
+      "Both players are set to RANDOM civilization, so the caravan and the Central Asian raiders may render in any architecture (Teutonic, Japanese, Meso-American), undermining an explicitly Silk Road setting.",
+      "The escort force is a Western European retinue — knights, crossbowmen, spearmen — whereas the Polos travelled as a small merchant party with hired local guides and Mongol safe-conduct (paiza), not an armed column.",
+      "Maffeo Polo, Niccolo's brother and a member of the actual 1271 journey, is absent.",
+      "Palm forest as the dominant vegetation across a map that is supposed to include the Pamirs and Gobi is a poor fit for the high passes.",
+      "The two bandit ambushes are invented set pieces; the historical hazards on this leg were principally the Karaunas brigands in Persia, disease (Marco's long illness in Badakhshan) and altitude/desert attrition, none of which are modelled."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "FREDERICK_BARBAROSSA"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "FREDERICK_BARBAROSSA"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 1.667,
+    "setting": 2.333,
+    "events": 3.667,
+    "objective": 5.0,
+    "pedagogy": 4.0,
+    "mean": 3.167,
+    "issues_found": [
+      "Marco Polo is represented by the EL_CID hero — an 11th-century Castilian warlord — and Niccolo Polo by FREDERICK_BARBAROSSA, a 12th-century Holy Roman Emperor. Both are figures of unrelated culture and century; the engine ships no Marco Polo hero, but a renamed generic unit (villager, trade cart escort, or even a monk) was available and would have been correct.",
+      "Kublai Khan, the destination and the man the whole journey is about, is not represented by any unit at all — the Khan's court at Shangdu is a single GAIA TOWN_CENTER with two flags, and no ruler figure or Mongol court retinue stands there.",
+      "Both active players are set to RANDOM civilization, so the architecture of Player 1's Venetian caravan and Player 2's Central Asian raiders is left to chance rather than assigned (Italians/Mongols or Tatars/Cumans were all available).",
+      "The caravan's pack animals are SHEEP. The engine offers trade carts and camel units, which would represent Silk Road pack animals and trade goods far more faithfully; the narration even speaks of 'trade goods' that are nowhere placed.",
+      "The escort force is KNIGHT, CROSSBOWMAN and SPEARMAN — a Western European field detachment. The historical Polos travelled as a tiny merchant party of three with local guides, not with heavy cavalry and crossbowmen.",
+      "TREE_PALM_FOREST used throughout, including in the stretch narrated as the Pamir foothills, where palms are geographically impossible.",
+      "The raiders occupy ARCHERY_RANGE buildings and a dozen yurts, giving the 'bandits' a fixed settlement and military infrastructure they would not have had as caravan robbers."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "EL_CID",
+        "FREDERICK_BARBAROSSA"
+      ],
+      "unsupported_heroes": [
+        "EL_CID",
+        "FREDERICK_BARBAROSSA"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}

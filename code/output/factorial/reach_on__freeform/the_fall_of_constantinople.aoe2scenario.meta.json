@@ -1,0 +1,130 @@
+{
+  "title": "The Fall of Constantinople",
+  "description": "April-May 1453. The player commands the last defenders of Byzantium under Constantine XI. Hold the Theodosian Walls against Mehmed II's siege: repair breaches from bombard fire, guard the sea walls along the Golden Horn, and survive repeated assaults. Defeat comes if the Hagia Sophia district falls; victory means holding until the final assault is broken.",
+  "scenario_type": "defense",
+  "map_size": 120,
+  "players": 2,
+  "difficulty": "hard",
+  "region": "mediterranean",
+  "player_civ": "eastern_european",
+  "enemy_civ": "middle_eastern",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
+  "reachability_prompting": true,
+  "prompt_style": "freeform",
+  "use_introspection": true,
+  "best_of": 1,
+  "max_repair_attempts": 3,
+  "model": "anthropic/claude-sonnet-5-20260630",
+  "temperature": 0.0,
+  "max_tokens": 32000,
+  "generator_version": "2.1",
+  "outcome": "success",
+  "run_id": "run_7fe3e29920d7",
+  "candidate": 1,
+  "attempts": 1,
+  "trigger_count": 13,
+  "output_path": "output/factorial\\reach_on__freeform\\the_fall_of_constantinople.aoe2scenario",
+  "timestamp_utc": "2026-08-09T12:51:22Z",
+  "fidelity": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v1",
+    "rubric_hash": "d2471612da57d3e1",
+    "n_judgements": 3,
+    "combatants": 2.667,
+    "material": 3.0,
+    "events": 3.0,
+    "anachronism": 2.0,
+    "pedagogy": 2.0,
+    "mean": 2.533,
+    "anachronisms_found": [
+      "SALADIN placed as Sultan Mehmed II: Saladin was a Kurdish Ayyubid sultan who died in 1193, 260 years before 1453 and from an entirely different dynasty and army; a generic Turkish hero, a King unit, or a renamed unique unit would have avoided this",
+      "CAMEL_RIDER x4 in the Ottoman roster: camel cavalry are not part of the Ottoman siege force at Constantinople (and are not even available to the Turkish civilisation in the engine); the besiegers' shock arm was the sipahi horseman and the Janissary corps",
+      "No JANISSARY or HAND_CANNONEER anywhere in the Ottoman army despite these being available in the engine and being the defining Ottoman assault troops of 1453; CHAMPION x6 stands in for them",
+      "TREE_PALM_FOREST x6 as the map's vegetation: palm forest belongs to a desert/tropical tileset, not the Thracian and Bosphorus landscape of Constantinople",
+      "No water tiles, sea walls, or any naval units despite the Golden Horn / 'ships dragged overland past Galata' narration; the naval beat is delivered by land-unit PATROL triggers, so the Ottoman fleet simply does not exist",
+      "Only 2 BOMBARD_CANNON for the famous siege train (Orban's great bombard plus dozens of guns), with MANGONEL x2 filling in — mangonels are period-plausible but understate the gunpowder character of this specific siege"
+    ]
+  },
+  "fidelity_v2": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2",
+    "rubric_hash": "675888722d2d3786",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 3.0,
+    "objective": 2.0,
+    "pedagogy": 3.0,
+    "mean": 2.25,
+    "issues_found": [
+      "Sultan Mehmed II is represented by the SALADIN hero — a 12th-century Kurdish Ayyubid, three centuries and an entirely different polity removed from the Ottoman conqueror of 1453. The engine ships no Mehmed hero, but a renamed generic Champion/Cavalier (as was done for Constantine XI with the KING unit) was available and avoidable.",
+      "Both players' civilizations are left as RANDOM, so architecture, unique units and tech are arbitrary — Byzantines and Turks both exist in the engine and would have given Byzantine walls/cataphracts and Turkish janissaries/bombards.",
+      "TREE_PALM_FOREST is used for the vegetation around Constantinople; palms are wrong for the Bosphorus/Thrace and cheap alternatives (pine, oak) exist.",
+      "Ottoman assault force is built of CAMEL_RIDER x4 and CHAMPION x6 rather than the era-defining janissary infantry; hand cannoneers or elite infantry would have been closer, and camels are not part of the 1453 siege army.",
+      "Victory is triggered by killing the enemy leader, which inverts history: Mehmed survived and the city fell. The narration then asserts 'Constantinople stands - the walls of Rome hold once more', a flat counterfactual.",
+      "Hagia Sophia is represented by a MONASTERY and the sea walls/Golden Horn are only referenced in text; no water, harbour chain or ship objects appear in the roster to support the 'ships over land' wave, which is delivered by land PATROL actions only."
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  },
+  "fidelity_v2_1": {
+    "judge_model": "anthropic/claude-opus-5",
+    "rubric_version": "v2.1",
+    "rubric_hash": "c51d48535325f97f",
+    "n_judgements": 3,
+    "combatants": 2.0,
+    "setting": 2.0,
+    "events": 3.333,
+    "objective": 2.0,
+    "pedagogy": 3.0,
+    "mean": 2.333,
+    "issues_found": [
+      "SALADIN is placed as the Ottoman commander for Mehmed II — a Kurdish Ayyubid sultan of the 1180s standing in for an Ottoman sultan of 1453, an avoidable cross-culture and cross-era error when a renamed generic unit (or a Janissary/Champion named 'Mehmed II') was available",
+      "Both players' civilizations are left RANDOM, so architecture sets and unit bonuses may render Byzantines and Ottomans as, e.g., Celts and Vikings; the engine ships both Byzantines and Turks and neither was assigned",
+      "The Ottoman assault force uses CHAMPION x6 and CAMEL_RIDER x4 rather than the Turkish Janissary the engine actually ships — janissaries were the signature assault troops of the 1453 storm, and camel riders were not part of the army before Constantinople",
+      "The Golden Horn sea-wall theme is narrated ('Mehmed's fleet, dragged overland past Galata... now floats upon the Golden Horn') but there is no water, no dock, and not a single ship placed anywhere on the 120x120 map; Wave 3 is delivered by the same land patrol as the other waves",
+      "TREE_PALM_FOREST x6 as the map's only vegetation is wrong for Thrace and the Bosphorus",
+      "Only ONAGER x1 and SCORPION x2 plus a Siege Workshop for the defenders, and no Byzantine-specific defensive flavour (e.g., Sea Walls/Harbour, cataphract-type troops); STONE_WALL x124 with GUARD_TOWER x5 and a single KEEP is a thin abstraction of the triple Theodosian line — the inner/outer wall and moat structure is not represented",
+      "Victory fires on the death of the enemy commander, producing the counterfactual 'the Ottoman host breaks and flees. Constantinople stands' — the City fell on 29 May 1453 and Mehmed II survived to reign for 28 more years",
+      "Hagia Sophia is represented by a MONASTERY that must be destroyed for defeat, but historically Hagia Sophia was never destroyed — it was converted, and the City's fall turned on the breach at the Gate of St. Romanus, not on the church burning"
+    ],
+    "combatants_precondition": {
+      "passed": false,
+      "placed_heroes": [
+        "SALADIN"
+      ],
+      "unsupported_heroes": [
+        "SALADIN"
+      ]
+    },
+    "setting_precondition": {
+      "passed": false,
+      "player_civilizations": {
+        "1": "RANDOM",
+        "2": "RANDOM"
+      },
+      "unassigned_players": [
+        1,
+        2
+      ]
+    }
+  }
+}
